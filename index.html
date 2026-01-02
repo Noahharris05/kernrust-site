@@ -1,28 +1,276 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Kern Rust</title>
     <meta charset="UTF-8" />
-    <style>
-      body {
-        background-color: #111;
-        color: #eee;
-        font-family: sans-serif;
-        padding: 40px;
-      }
-      h1 {
-        color: #f04;
-      }
-      a {
-        color: #0cf;
-      }
-    </style>
+    <title>Kern Rust - EU Vanilla+ Rust Server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kern Rust - EU Vanilla+ Rust server with a gritty survival experience, balanced gameplay and active administration."
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Kern Rust</h1>
-    <p>EU x3 Vanilla+ Rust Server</p>
-    <p><strong>IP:</strong> 151.240.121.101:29021</p>
-    <p><strong>Discord:</strong> <a href="https://discord.gg/bhCYFCP5ze">Join here</a></p>
-    <p><strong>Wipes:</strong> Every Friday at 13:00 CET</p>
+    <div class="bg-noise"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo-block">
+          <div class="logo-mark">KR</div>
+          <div class="logo-text">
+            <span class="logo-title">KERN RUST</span>
+            <span class="logo-subtitle">EU Vanilla+ Rust Server</span>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#info">Server Info</a>
+          <a href="#discord">Discord</a>
+          <a href="#vote">Vote</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="eyebrow">EU VANILLA+ • NO PAY TO WIN</p>
+            <h1>Survive the grind. Trust no one.</h1>
+            <p class="hero-subtitle">
+              Kern Rust delivers a raw, cinematic survival experience.
+              Balanced Vanilla+ settings, active administration and a
+              no‑nonsense atmosphere for players who take Rust seriously.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="btn primary"
+                href="steam://connect/151.240.121.101:29021"
+              >
+                Connect now
+              </a>
+              <a
+                class="btn ghost"
+                href="https://discord.gg/bhCYFCP5ze"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join Discord
+              </a>
+            </div>
+
+            <div class="hero-meta">
+              <div class="meta-item">
+                <span class="meta-label">Wipe schedule</span>
+                <span class="meta-value">Every Friday • 13:00 CET</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Map</span>
+                <span class="meta-value">Procedural • Medium size</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Region</span>
+                <span class="meta-value">EU • Low ping</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <div class="status-card">
+              <div class="status-header">
+                <span class="status-dot online"></span>
+                <span class="status-text">Server status</span>
+              </div>
+              <div class="status-body">
+                <!-- Placeholder – kan kobles til API senere -->
+                <p class="status-main">Online</p>
+                <p class="status-sub">
+                  Players: <span>— / —</span><br />
+                  Last wipe: <span>Every Friday</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="ip-card">
+              <div class="ip-label">Direct connect IP</div>
+              <div class="ip-value">151.240.121.101:29021</div>
+              <button
+                class="btn small"
+                onclick="navigator.clipboard.writeText('151.240.121.101:29021')"
+              >
+                Copy IP
+              </button>
+            </div>
+
+            <div class="rules-snippet">
+              <h3>Server philosophy</h3>
+              <ul>
+                <li>Vanilla+ feel – no pay to win.</li>
+                <li>Active admins, minimal interference.</li>
+                <li>No cheating, scripting or exploiting.</li>
+                <li>Respectful but ruthless gameplay.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT / FEATURES -->
+      <section id="about" class="section dark">
+        <div class="container section-inner">
+          <div class="section-header">
+            <h2>Why Kern Rust?</h2>
+            <p>
+              Built for players who want a clean, fair and cinematic Rust
+              experience without pay‑to‑win garbage or admin abuse.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <h3>Vanilla+ balance</h3>
+              <p>
+                Core Rust experience with light quality‑of‑life tweaks. No crazy
+                multipliers – just enough to keep the grind satisfying.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>Consistent wipes</h3>
+              <p>
+                Predictable Friday wipes at 13:00 CET so you can plan your
+                wipes, wars and weekend sessions.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>Serious players</h3>
+              <p>
+                Kern Rust is aimed at players who care about teamplay, base
+                design and long fights – not 5‑minute servers.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>Active administration</h3>
+              <p>
+                Hands‑on admins focused on stability, performance and fairness.
+                No random abuse, just clean enforcement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVER INFO -->
+      <section id="info" class="section">
+        <div class="container section-inner">
+          <div class="section-header">
+            <h2>Server information</h2>
+            <p>Everything you need to know before you drop in.</p>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <h3>Core settings</h3>
+              <ul>
+                <li><strong>Region:</strong> EU</li>
+                <li><strong>Type:</strong> Vanilla+</li>
+                <li><strong>Wipes:</strong> Fridays, 13:00 CET</li>
+                <li><strong>Blueprints:</strong> (Adjust text as needed)</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <h3>Gameplay</h3>
+              <ul>
+                <li><strong>Kits:</strong> None / minimal</li>
+                <li><strong>TP / Home:</strong> None (true Rust)</li>
+                <li><strong>Clans / Teams:</strong> (Adjust as needed)</li>
+                <li><strong>Raid times:</strong> 24/7</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <h3>Technical</h3>
+              <ul>
+                <li><strong>DDOS protected hosting</strong></li>
+                <li><strong>Optimized plugins only</strong></li>
+                <li><strong>Active performance monitoring</strong></li>
+                <li><strong>Low ping for EU players</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DISCORD -->
+      <section id="discord" class="section dark">
+        <div class="container section-inner discord-section">
+          <div>
+            <div class="section-header">
+              <h2>Join the community</h2>
+              <p>
+                Get wipe announcements, patch notes, reports and squad up with
+                other Kern Rust players.
+              </p>
+            </div>
+            <a
+              class="btn primary"
+              href="https://discord.gg/bhCYFCP5ze"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join Kern Rust Discord
+            </a>
+            <p class="discord-tagline">
+              Discord is required for reports, appeals and serious issues.
+            </p>
+          </div>
+
+          <div class="discord-embed-placeholder">
+            <p>
+              Discord embed can be placed here using the official widget once
+              you’re ready.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VOTE -->
+      <section id="vote" class="section">
+        <div class="container section-inner">
+          <div class="section-header">
+            <h2>Support the server</h2>
+            <p>
+              Voting helps new players discover Kern Rust. It takes seconds and
+              makes a real difference.
+            </p>
+          </div>
+
+          <div class="vote-grid">
+            <div class="vote-card">
+              <h3>Vote link #1</h3>
+              <p>Add your first Rust server list link here.</p>
+              <a class="btn ghost small" href="#" target="_blank">Vote</a>
+            </div>
+            <div class="vote-card">
+              <h3>Vote link #2</h3>
+              <p>Add another relevant listing here.</p>
+              <a class="btn ghost small" href="#" target="_blank">Vote</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>&copy; <span id="year"></span> Kern Rust. All rights reserved.</span>
+        <span class="footer-note">Unofficial Rust server. Not affiliated with Facepunch Studios.</span>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent =
+        new Date().getFullYear().toString();
+    </script>
   </body>
 </html>
