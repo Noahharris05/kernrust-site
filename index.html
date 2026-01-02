@@ -229,11 +229,15 @@
             </p>
           </div>
 
-          <div class="discord-embed-placeholder">
-            <p>
-              Discord embed can be placed here using the official widget.
-            </p>
-          </div>
+          <!-- DISCORD WIDGET -->
+          <iframe
+            src="https://discord.com/widget?id=1287095134160420927&theme=dark"
+            width="100%"
+            height="500"
+            allowtransparency="true"
+            frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+          ></iframe>
         </div>
       </section>
 
@@ -247,15 +251,19 @@
 
           <div class="vote-grid">
             <div class="vote-card">
-              <h3>Vote link #1</h3>
-              <p>Add your first Rust server list link here.</p>
-              <a class="btn ghost small" href="#" target="_blank">Vote</a>
+              <h3>RustServers.gg</h3>
+              <p>Vote to support Kern Rust and help new players discover the server.</p>
+              <a class="btn ghost small" href="https://rustservers.gg/server/5922046" target="_blank">
+                Vote on RustServers.gg
+              </a>
             </div>
 
             <div class="vote-card">
-              <h3>Vote link #2</h3>
-              <p>Add another relevant listing here.</p>
-              <a class="btn ghost small" href="#" target="_blank">Vote</a>
+              <h3>Rust-Servers.net</h3>
+              <p>Boost our visibility and help the community grow.</p>
+              <a class="btn ghost small" href="https://rust-servers.net/server/177200/" target="_blank">
+                Vote on Rust-Servers.net
+              </a>
             </div>
           </div>
         </div>
@@ -320,6 +328,50 @@
 
       updateWipeCountdown();
       setInterval(updateWipeCountdown, 60 * 1000);
+
+      // -------------------------------
+      // LIVE PLAYER COUNT VIA BATTLEMETRICS
+      // -------------------------------
+
+      async function updateRustPlayerCount() {
+        const playerEl = document.getElementById("player-count");
+        const maxEl = document.getElementById("player-max");
+
+        try {
+          const res = await fetch("https://api.battlemetrics.com/servers/37054330");
+          const json = await res.json();
+
+          const data = json.data.attributes;
+
+          const players = data.players;
+          const maxPlayers = data.maxPlayers;
+          const status = data.status;
+
+          // Update UI
+          playerEl.textContent = players;
+          maxEl.textContent = maxPlayers;
+
+          // Update online/offline dot
+          const dot = document.querySelector(".status-dot");
+          const text = document.getElementById("server-online-text");
+
+          if (status === "online") {
+            dot.classList.add("online");
+            text.textContent = "Online";
+          } else {
+            dot.classList.remove("online");
+            text.textContent = "Offline";
+          }
+        } catch (err) {
+          console.error("BattleMetrics API failed:", err);
+          playerEl.textContent = "—";
+          maxEl.textContent = "—";
+        }
+      }
+
+      // Run immediately + every 60 sec
+      updateRustPlayerCount();
+      setInterval(updateRustPlayerCount, 60000);
     </script>
   </body>
 </html>
